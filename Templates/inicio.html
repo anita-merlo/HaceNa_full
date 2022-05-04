@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{url_for ('static', filename= 'static')}}"/>
+</head>
+<body bgcolor="white">  
+<nav class="bg-blue-700 px-2 sm:px-4 py-5 rounded-xl">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <a href="{{ url_for ('inicio') }}" class="flex items-center">
+    <span class="self-center text-3xl font-bold whitespace-nowrap dark:text-white">HaceNa</span>
+    </a>
+    <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-white-500 rounded-lg md:hidden hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-white-200 dark:text-white-400 dark:hover:bg-white-700 dark:focus:ring-white-600" aria-controls="mobile-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+    <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+    <li>
+    <a href="{{ url_for ('inicio') }}" class="font-bold text-xl block py-2 pr-4 pl-3 text-orange bg-orange-400 rounded md:bg-transparent md:text-orange-400 md:p-0 dark:text-orange" aria-current="page">Inicio</a>
+    </li>
+    <li>
+    <a href="{{ url_for ('registratena') }}" class="font-bold text-xl block py-2 pr-4 pl-3 text-white border-b border-white-100 hover:bg-white-50 md:hover:bg-transparent md:border-0 md:hover:text-orange-400 md:p-0 dark:text-white-400 md:dark:hover:text-orange dark:hover:bg-white-700 dark:hover:text-orange md:dark:hover:bg-transparent dark:border-white-700">RegistrateNa</a>
+    </li>
+    <li>
+    <a href="{{ url_for ('ingresana') }}" class="font-bold text-xl block py-2 pr-4 pl-3 text-white border-b border-white-100 hover:bg-white-50 md:hover:bg-transparent md:border-0 md:hover:text-orange-400 md:p-0 dark:text-white-400 md:dark:hover:text-orange dark:hover:bg-white-700 dark:hover:text-orange md:dark:hover:bg-transparent dark:border-white-700">IngresaNa</a>
+    </li>
+    <li>
+    <a href="{{ url_for ('informatena') }}" class="font-bold text-xl block py-2 pr-4 pl-3 text-white border-b border-white-100 hover:bg-white-50 md:hover:bg-transparent md:border-0 md:hover:text-orange-400 md:p-0 dark:text-white-400 md:dark:hover:text-orange dark:hover:bg-white-700 dark:hover:text-orange md:dark:hover:bg-transparent dark:border-white-700">InformateNa</a>
+    </li>
+    <li>
+    <a href="{{ url_for ('contactana') }}" class="font-bold text-xl block py-2 pr-4 pl-3 text-white hover:bg-white-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-400 md:p-0 dark:text-white-400 md:dark:hover:text-orange dark:hover:bg-white-700 dark:hover:text-orange md:dark:hover:bg-transparent">ContactaNa</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    <br /><br />
+    <br /><br />
+    <br />
+
+    <div class="grid grid-rows-1 gap-2">
+        <div class="text-justify bg-white p-2">
+            <h1 class=" ml-2 text-orange-400 text-6xl font-bold py-0 px-6">¿Quienes somos?
+            </h1>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+        <div class="text-justify bg-white p-2">
+            <hl class=" ml-2 text-orange-400 text-3xl font-semibold py-0 px-9"><p class=" mx-8">Somos una plataforma que busca conectar jóvenes freelancers con personas y/o empresas con la necesidad de formular, diseñar, evaluar y crear proyectos a través del uso óptimo de la tecnología.</p></hl>
+        </div>
+        <div>
+            <img class="-mt-20" src="{{url_for ('static', filename= 'imagen1.png')}}" width = "600" height = "600"/>
+        </div>
+    </div>
+
+    <br /><br />
+    <br /><br />
+    <!-- Menu de accciones HaceNa -->
+    <div class="shadow-xl mx-8 py-4 px-4 rounded-xl grid grid-flow-rows-2 gap-24 bg-orange-100 md:mx-4 md:py-4 md:px-4 md:rounded-xl md:grid md:grid-flow-rows-2 md:gap-5 md:bg-orange-100">
+        <!-- Bolsa de trabajo freelance -->
+        <div class="mx-8 py-4 px-4 rounded-xl grid grid-flow-rows-2 gap-24 bg-orange-100 md:mx-4 md:py-4 md:px-4 md:rounded-xl md:grid md:grid-flow-cols-2 md:gap-20 md:bg-transparent">
+            <div class="text-justify bg-orange-100 p-2">
+                <center><h1 class="text-blue-700 text-6xl font-bold py-0 px-6">¿Que podemos hacer en HaceNa?
+                </h1></center>
+            </div>
+            <!-- Aca se generan las colunmas -->
+            <div class="grid grid-flow-rows-2 gap-24 md:grid md:grid-cols-2 md:gap-2 ">
+                <div class="mx-4 py-4 px-4 rounded-xl shadow-xl grid grid-flow-rows-2 gap-0 bg-white">
+                    <div class="mx-4 py-4 px-4 rounded-xl bg-transparent">
+                        <div>
+                            <center><img class="-mt-20" src="{{url_for ('static', filename= 'imagen5.png')}}" width = "300" height = "300"/>
+                        </div>
+                    </div>
+                    <div class="-mt-3 text-center bg-white">
+                        <center></center><a href="{{ url_for ('trabajana') }}"><button class="mt-4 mx-4 py-2 px-2 rounded-xl bg-blue-700 hover:bg-orange-400"><h1 class="text-white text-2xl font-bold py-0 px-3">TrabajaNa
+                        </h1></button></a></center>
+                        <br />
+                        <h1 class="text-justify text-orange-400 text-xl font-semibold py-2 px-3">Buscador de proyectos o puestos laborales, elije entre miles con el filtro de full-time o part-time</h1>
+                    </div>
+                </div>
+                <div class="mx-4 py-4 px-4 rounded-xl shadow-xl grid grid-flow-rows-2 gap-0 bg-white">
+                    <div class="mx-4 py-4 px-4 rounded-xl bg-transparent">
+                        <div>
+                            <center><img class="-mt-20" src="{{url_for ('static', filename= 'imagen4.png')}}" width = "300" height = "300"/>
+                        </div>
+                    </div>
+                    <div class="-mt-3 text-center bg-white">
+                        <center></center><a href="{{ url_for ('contratana_menu') }}"><button class="mt-4 mx-4 py-2 px-2 rounded-xl bg-blue-700 hover:bg-orange-400"><h1 class="text-white text-2xl font-bold py-0 px-3">ContrataNa
+                        </h1></button></a></center>
+                        <br />
+                        <h1 class="text-justify text-orange-400 text-xl font-semibold py-2 px-3">Buscador de freelancers con sus recomendaciones y publicador de proyectos</h1>
+                    </div>
+                        
+                        
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Academia de HaceNa -->
+        <div class="mx-8 py-4 px-4 rounded-xl grid grid-flow-rows-2 gap-24 bg-orange-100 md:mx-4 md:py-4 md:px-4 md:rounded-xl md:grid md:grid-flow-cols-2 md:gap-10 md:bg-transparent">
+            <div class="text-justify bg-orange-100 p-2">
+                
+            </div>
+            <!-- Aca se generan las colunmas -->
+            <div class="grid grid-flow-rows-2 gap-24 md:grid md:grid-cols-2 md:gap-2 ">
+                <div class="mx-4 py-4 px-4 rounded-xl shadow-xl grid grid-flow-rows-2 gap-0 bg-white">
+                    <div class="mx-4 py-4 px-4 rounded-xl bg-transparent">
+                        <div>
+                            <center><img class="-mt-20" src="{{url_for ('static', filename= 'imagen2.png')}}" width = "300" height = "300"/>
+                        </div>
+                    </div>
+                    <div class="-mt-3 text-center bg-transparent">
+                        <center></center><a href="{{ url_for ('aprendena') }}"><button class="mt-4 mx-4 py-2 px-2 rounded-xl bg-blue-700 hover:bg-orange-400"><h1 class="text-white text-2xl font-bold py-0 px-3">AprendeNa
+                        </h1></button></a></center>
+                        <br />
+                        <h1 class="text-justify text-orange-400 text-xl font-semibold py-2 px-3">Te conectamos con Mentoría experta de la mano de los mejores en el área que necesites para aprender y seguir mejorando proyectos.
+                        </h1>
+                    </div>
+                </div>
+                <div class="mx-4 py-4 px-4 rounded-xl shadow-xl grid grid-flow-rows-2 gap-0 bg-white">
+                    <div class="mx-4 py-4 px-4 rounded-xl bg-transparent">
+                        <div>
+                            <center><img class="-mt-20" src="{{url_for ('static', filename= 'imagen3.png')}}" width = "300" height = "300"/>
+                        </div>
+                    </div>
+                    <div class="-mt-3 text-center bg-transparent">
+                        <center></center><a href="{{ url_for ('ensenana') }}"><button class="mt-4 mx-4 py-2 px-2 rounded-xl bg-blue-700 hover:bg-orange-400"><h1 class="text-white text-2xl font-bold py-0 px-3">EnseñaNa
+                        </h1></button></a></center>
+                        <br />
+                        <h1 class="text-justify text-orange-400 text-xl font-semibold py-2 px-3">Sección exclusiva para usuarios que desean mentorear, enseñar o tutorear proyectos y usuarios</h1></br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
